@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Button, StyleSheet } from 'react-native';
+import { View, Text, FlatList,  StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import LinearGradient from 'react-native-linear-gradient';
+import {Button  } from '@rneui/themed'
 
 const Screen3 = ({ navigation }) => {
   const [data, setData] = useState([]);
@@ -28,7 +30,20 @@ const Screen3 = ({ navigation }) => {
       <Text>{item.precioCosto}</Text>
       <Text>{item.precioVenta}</Text>
       <Text>{item.cantVendido}</Text>
-      <Button title="Modificar" onPress={() => navigateToModify(index)} />
+
+      <Button
+            ViewComponent={LinearGradient} 
+            linearGradientProps={{
+              colors: ["#f47f36", "#F6A800"],
+              start: { x: 0, y: 0.5 },
+              end: { x: 1, y: 0.5 },
+            }}
+            onPress={() => navigateToModify(index)}
+            //style={[styles.button, { marginTop: 85}]}
+          >
+            Modificar
+          </Button>
+      
     </View>
   );
 
@@ -47,7 +62,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#6f6f6f',
+    backgroundColor: '#002F5C',
   },
   item: {
     flexDirection: 'row',
