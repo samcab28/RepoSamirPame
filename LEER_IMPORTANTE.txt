@@ -1,0 +1,1 @@
+NOTA: la aplicación se encuantra en la rama llamada "Prueba" y la carpeta HardwareStoreApp se encuentra dentro de la carpeta de Ferreteria
