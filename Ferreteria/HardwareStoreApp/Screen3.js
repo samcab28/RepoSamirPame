@@ -15,7 +15,14 @@ const Screen3 = ({ navigation }) => {
 
   useEffect(() => {
     loadData();
-  }, []);
+
+    const unsubscribe = navigation.addListener('focus', () => {
+      // Recargar datos cuando la pantalla obtenga el enfoque
+      loadData();
+    });
+    // Cleanup
+    return unsubscribe;
+  }, [navigation]);
 
 
   const navigateToModify = index => {
