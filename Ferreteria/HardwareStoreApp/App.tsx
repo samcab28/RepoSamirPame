@@ -1,5 +1,9 @@
-import React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import React from 'react';
+
 import { createStackNavigator } from '@react-navigation/stack';
 import Screen0 from './Screen0';
 import Screen1 from './Screen1';
@@ -10,6 +14,7 @@ import Screen5 from './Screen5';
 import Nosotros from './Nosotros';
 
 const Stack = createStackNavigator();
+//const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (

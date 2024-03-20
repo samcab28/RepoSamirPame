@@ -3,6 +3,8 @@ import { View, Text, Image,  StyleSheet } from 'react-native';
 import { Button } from '@rneui/themed';
 import LinearGradient from 'react-native-linear-gradient';
 
+
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#002F5C",
