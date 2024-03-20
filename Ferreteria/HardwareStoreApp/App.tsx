@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Screen0"
+      <Stack.Navigator initialRouteName="Home"
       screenOptions={{
         headerStyle: {
           backgroundColor: '#f6a800', // Color de fondo de la barra de navegación
